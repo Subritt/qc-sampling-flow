@@ -1,0 +1,5 @@
+
+target/
+dbt_packages/
+logs/
+sample_sr_raw_data.csv
