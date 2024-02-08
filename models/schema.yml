@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: base_indexing_data
+    description: "Raw Indexing Data"
+    columns:
+      - name: invoice_id
+        description: "unique id of invoice processed"
+        test:
+          - not null
