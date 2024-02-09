@@ -13,6 +13,8 @@ with raw_quality_data as (
     from {{ source('quality_data', 'sample_sr_raw_data') }}
 ),
 /*
+Column Headers:
+---------------
 InvoiceID, IndexingStep2, ClientCode, Indexer, ChangedDate_EST,
 InvoiceNumber, InvoiceDate, Amount, Company, Vendor, AccountNumber, DueDate,
 SR_URL1
@@ -43,4 +45,4 @@ add_random_number_column as (
     from raw_quality_data
 )
 
-select * from change_column_header_name
+select * from add_random_number_column
