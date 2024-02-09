@@ -24,7 +24,7 @@ change_column_header_name as (
         "IndexingStep2" as indexing_label,
         "ClientCode" as client_code,
         "Indexer" as indexer_srcfid,
-        "ChangedDate_EST" as changed_date_est,
+        "ChangedDate_EST"::timestamp as changed_date_est,
         "InvoiceNumber" as invoice_number,
         "InvoiceDate" as invoice_date,
         "Amount" as amount,
@@ -33,6 +33,13 @@ change_column_header_name as (
         "AccountNumber" as account_number,
         "DueDate" as due_date,
         "SR_URL1" as invoice_url
+    from raw_quality_data
+),
+
+add_random_number_column as (
+    select
+        *,
+        RANDOM() as random_number
     from raw_quality_data
 )
 
