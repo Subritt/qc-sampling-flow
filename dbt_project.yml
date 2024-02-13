@@ -23,6 +23,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+quoting:
+  database: false
+  identifier: false
+  schema: false
+
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -34,3 +39,4 @@ models:
   cf_qc_flow:
     # Config indicated by + and applies to all files under models/example/
       +materialized: view
+      +quote_columns: false
