@@ -32,17 +32,19 @@ get_stg_indexing_data as (
 
 remove_remaining_columns as (
     select
-        invoice_url,
-        invoice_date,
-        company,
-        amount,
-        vendor,
+        invoice_id,
+        indexing_label,
+        client_code,
+        indexer_srcf_id,
+        changed_at,
         invoice_number,
+        invoice_date,
+        amount,
+        company,
+        vendor,
         account_number,
         due_date,
-        client_code,
-        invoice_id,
-        indexer_srcf_id
+        invoice_url
     from get_stg_indexing_data
     where entry_version = 1
 )
