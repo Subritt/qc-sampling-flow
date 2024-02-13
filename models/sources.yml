@@ -4,4 +4,3 @@ sources:
     schema: internal
     tables:
       - name: sample_sr_raw_data
-    
