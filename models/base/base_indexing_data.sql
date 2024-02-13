@@ -39,7 +39,8 @@ change_column_header_name as (
         indexing_step_2 as indexing_label,
         client_code,
         indexer as indexer_srcf_id,
-        changed_date_est::timestamp as changed_at, -- time in UTC
+        -- typecasting changed_date_est in text to timestamp
+        changed_date_est::timestamp as changed_at,
         invoice_number,
         invoice_date,
         amount,
