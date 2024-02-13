@@ -1,6 +1,6 @@
 /*
-- removing columns that are not required.
-- re-arranging the columns as per the requirement.
+    - only factoring in the latest entries from stg_indexing_data model.
+        - i.e. where entry_version is 1.
 */
 
 {{
